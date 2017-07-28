@@ -205,49 +205,46 @@ header {
     font-size: 12px;
 }
 
+.toggle-search {
+    display: none;
+}
+
+.toggle-search:checked ~ .search-form  {
+    display: block;
+}
+
+label[for="toggle-search"] {
+    margin-left: 17px;
+    cursor: pointer;
+}
+
 .search-form {
     position: relative;
+    display: none;
 }
 
 .search {
-    background-image: url("images/search.png");
-    background-repeat: no-repeat;
-    background-position: center right;
-    cursor: pointer;
-    border: none;
-    height: 14px;
-    width: 14px;
-    margin: 0px 0px 0px 17px;
-}
-
-.search:focus {
     width: 160px;
     height: 26px;
     border: 1px solid black;
     position: absolute;
-    top: -16px;
+    bottom: -5px;
     right: 30px;
-    background-image: none;
-    cursor: default;
 }
 
 .search-submit {
+    width: 30px;
     height: 26px;
-    display: none;
+    display: inline;
     background-image: url("images/search.png");
     background-repeat: no-repeat;
+    background-position: center;
     border: 1px solid black;
     background-color: white;
     position: absolute;
-    top: -16px;
-    width: 30px;
-    background-position: center;
+    bottom: -5px;
     right: 1px;
     cursor: pointer;
-}
-
-.search:focus ~ .search-submit {
-    display: inline;
 }
 
 .products-menu {
